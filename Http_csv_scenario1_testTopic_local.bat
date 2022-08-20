@@ -2,7 +2,7 @@ java -Dlogging.level=ON -cp csvjdbc-1.0-37.jar;HashRelMap-0.0.1-SNAPSHOT-jar-wit
 -licensekey KloadNG92-2L52-OYMS-V5VU-6H8R-O7TS-STLP-I61A ^
 -sourcequery "SELECT CUSTID as CUSTIDTMP_dot_SAMP_, TRANSTYPE as TransType_dot_SAMP_, TRANSVALUE as TransValue_dot_SAMP_ FROM Sampleoutputforstreaming" ^
 -sourcereadintervalinimillisecs 5000 ^
--targettopic "test" ^
+-targethttpmethod "POST" ^
 -tablekeys "tablekey[0][0]=return CUSTIDTMP;SAMP" ^
 -sourcedburl "jdbc:relique:csv:." ^
 -sourcedriver "org.relique.jdbc.csv.CsvDriver" ^
