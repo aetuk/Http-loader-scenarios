@@ -9,7 +9,7 @@ java -Dlogging.level=ON -cp csvjdbc-1.0-37.jar;HashRelMap-0.0.1-SNAPSHOT-jar-wit
 -sourceusername "jdbc_source_username" ^
 -sourceuserpassword "jdbc_source_password" ^
 -targetkeys CUSTIDTMP ^
--targeturl localhost:9093 ^
+-targeturl 192.168.56.101:9091 ^
 -targetdbtable data.ddstest_11b6429df8735b13d70808652d560be2 ^
 -targetusername dnode_ext ^
 -targetpassword dnode_ext ^
