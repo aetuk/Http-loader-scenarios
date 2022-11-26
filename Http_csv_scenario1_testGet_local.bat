@@ -10,7 +10,7 @@ java -Dlogging.level=ON -cp csvjdbc-1.0-37.jar;HashRelMap-0.0.1-SNAPSHOT-jar-wit
 -sourceusername "jdbc_source_username" ^
 -sourceuserpassword "jdbc_source_password" ^
 -targetkeys userid ^
--targeturl "http://132.145.65.68:8080/bre/getdata?userid=~userid~&age=~age~&breuserid=~breuserid~&channel=~channel~&brecontext=~brecontext~" ^
+-targeturl "http://132.145.65.68:8080/bre/getdata?userid=[userid]&age=[age]&breuserid=[breuserid]&channel=[channel]&brecontext=[brecontext]" ^
 -targetdbtable data.ddstest_11b6429df8735b13d70808652d560be2 ^
 -targetusername dnode_ext ^
 -targetpassword dnode_ext ^
