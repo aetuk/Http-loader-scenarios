@@ -1,5 +1,5 @@
 java -Dlogging.level=ON -cp csvjdbc-1.0-37.jar;HashRelMap-0.0.1-SNAPSHOT-jar-with-dependencies.jar client.Ddsloader ^
--licensekey KloadNG92-2L52-OYMS-V5VU-6H8R-O7TS-STLP-I61A ^
+-licensekey HloadRATM-TGMB-62D3-RB6N-3RZ9-8MOW-D8QJ-4YK3 ^
 -sourcequery "SELECT userid as userid_dot_SAMP_, age as age_dot_SAMP_, EventId as EventId_dot_SAMP_, channel as channel_dot_SAMP_, breuserid as breuserid_dot_SAMP_, brecontext as brecontext_dot_SAMP_ FROM GetNextBestContent" ^
 -sourcereadintervalinimillisecs 5000 ^
 -targethttpmethod "GET" ^
