@@ -1,0 +1,22 @@
+java -Dlogging.level=ON -cp csvjdbc-1.0-37.jar;HashRelMap-0.0.1-SNAPSHOT-jar-with-dependencies.jar client.Ddsloader ^
+-licensekey Hload96J4-KZQO-9KQB-MSNF-FE8C-FLHP-DEBI-VICD ^
+-sourcequery "SELECT CUSTID as CUSTIDTMP_dot_SAMP_, TRANSTYPE as TransType_dot_SAMP_, TRANSVALUE as TransValue_dot_SAMP_ FROM Sampleoutputforstreaming" ^
+-sourcereadintervalinimillisecs 5000 ^
+-targethttpmethod "POST" ^
+-targetdataformat "JSON" ^
+-targetrootelement "message" ^
+-tablekeys "tablekey[0][0]=return CUSTIDTMP;SAMP" ^
+-sourcedburl "jdbc:relique:csv:." ^
+-sourcedriver "org.relique.jdbc.csv.CsvDriver" ^
+-sourceusername "jdbc_source_username" ^
+-sourceuserpassword "jdbc_source_password" ^
+-targetkeys CUSTIDTMP ^
+-targeturl http://132.145.51.102:8080/bre/postdatajsonp ^
+-targetdbtable "" ^
+-targetusername dnode_ext ^
+-targetpassword dnode_ext ^
+-dbfetchsize 1 ^
+-bulkloaderthreads 1 ^
+-setdatasources "top_ eq SAMP" ^
+-setcolumnmappings "CUSTIDTMP eq customerid"
+pause
