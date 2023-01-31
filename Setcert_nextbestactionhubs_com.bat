@@ -1,0 +1,1 @@
+keytool -import -noprompt -trustcacerts -alias nextbestactionhubs_com -file C:\Users\aetuk\Downloads\nextbestactionhubs_com.cer -keystore "%JAVA_HOME%/jre/lib/security/cacerts"
