@@ -1,16 +1,16 @@
 java -Dlogging.level=ON -cp csvjdbc-1.0-37.jar:HashRelMap-0.0.1-SNAPSHOT-jar-with-dependencies.jar client.Ddsloader \
 -licensekey HloadTrial7dayDCH2C2IICB4G242I1I8F48A38AD5CC81 \
--sourcequery "SELECT userid as userid_dot_SAMP_, age as age_dot_SAMP_, EventId as EventId_dot_SAMP_, channel as channel_dot_SAMP_, breuserid as breuserid_dot_SAMP_, brecontext as brecontext_dot_SAMP_ FROM test" \
+-sourcequery "SELECT propid as userid_dot_SAMP_, propname as propname_dot_SAMP_ FROM test" \
 -sourcereadintervalinimillisecs 5000 \
 -targethttpmethod "GET" \
 -targetdataformat "XML2" \
 -restresponsefileloc "test.csv" \
 -restresponsefileformat "CSV" \
--tablekeys "tablekey[0][0]=return userid;SAMP" \
+-tablekeys "tablekey[0][0]=return propid;SAMP" \
 -sourcedburl "jdbc:relique:csv:." \
 -sourcedriver "org.relique.jdbc.csv.CsvDriver" \
--targetkeys userid \
--targeturl "http://132.145.51.102:8080/bre/getdata?userid=[userid]&age=[age]&breuserid=[breuserid]&channel=[channel]&brecontext=[brecontext]" \
+-targetkeys propid \
+-targeturl "http://132.145.51.102:8080/bre/getdata?propid=[propid]" \
 -dbfetchsize 1 \
 -bulkloaderthreads 1 \
 -setdatasources "top_ eq SAMP" \
