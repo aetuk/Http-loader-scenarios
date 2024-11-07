@@ -1,16 +1,16 @@
 java -Dlogging.level=ON -cp csvjdbc-1.0-37.jar:HashRelMap-0.0.1-SNAPSHOT-jar-with-dependencies.jar client.Ddsloader \
 -licensekey HloadTrial7dayDCH2C2IICB4G242I1I8F48A38AD5CC81 \
--sourcequery "SELECT propid as userid_dot_SAMP_, propname as propname_dot_SAMP_ FROM test" \
+-sourcequery "SELECT propid as propid_dot_TEST_, propname as propname_dot_TEST_ FROM test" \
 -sourcereadintervalinimillisecs 5000 \
 -targethttpmethod "GET" \
 -targetdataformat "XML2" \
--restresponsefileloc "test.csv" \
+-restresponsefileloc "test.json" \
 -restresponsefileformat "CSV" \
--tablekeys "tablekey[0][0]=return propid;SAMP" \
+-tablekeys "tablekey[0][0]=return propid;TEST" \
 -sourcedburl "jdbc:relique:csv:." \
 -sourcedriver "org.relique.jdbc.csv.CsvDriver" \
 -targetkeys propid \
 -targeturl "http://132.145.51.102:8080/bre/getdata?propid=[propid]" \
 -dbfetchsize 1 \
 -bulkloaderthreads 1 \
--setdatasources "top_ eq SAMP" \
+-setdatasources "top_ eq TEST" \
