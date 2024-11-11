@@ -1,9 +1,9 @@
 java -Dlogging.level=ON -cp csvjdbc-1.0-37.jar:HashRelMap-0.0.1-SNAPSHOT-jar-with-dependencies.jar client.Ddsloader \
 -licensekey HloadTrial7dayDCH2C2IICB4G242I1I8F48A38AD5CC81 \
--sourcequery "SELECT propid as propid_dot_TEST_, propname as propname_dot_TEST_ FROM test" \
+-sourcequery "SELECT propid as propid_dot_TEST_, propname as propname_dot_TEST_ FROM test2" \
 -sourcereadintervalinimillisecs 5000 \
 -targethttpmethod "POST" \
--targetdataformat "XML2" \
+-targetdataformat "JSON" \
 -restresponsefileloc "test.json" \
 -restresponsefileformat "CSV" \
 -tablekeys "tablekey[0][0]=return propid;TEST" \
